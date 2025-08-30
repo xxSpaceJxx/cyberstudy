@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vulnerabilities & Attacks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-classical.html">Classical</a></li>
+      <li><a href="3-math.html">Math</a></li>
+      <li><a href="4-block.html">Block Ciphers</a></li>
+      <li><a href="5-publickey.html">Public Key</a></li>
+      <li><a href="6-hash.html">Hash & MACs</a></li>
+      <li><a href="7-attacks.html">Attacks</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Vulnerabilities & Attacks</h1>
+
+    <h2>Types of Attacks</h2>
+    <ul>
+      <li><b>Passive:</b> Eavesdropping, traffic analysis.</li>
+      <li><b>Active:</b> Modification, replay, masquerade, denial of service.</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <ul>
+      <li><b>Replay Attack:</b> Capturing and reusing a valid message.</li>
+      <li><b>Masquerade:</b> Pretending to be another user.</li>
+      <li><b>Timing Attack:</b> Infers secrets from runtime differences.</li>
+      <li><b>DoS:</b> Flooding a server to exhaust resources.</li>
+    </ul>
+
+    <h2>Vulnerabilities</h2>
+    <ul>
+      <li><b>Design-level:</b> Protocol flaw (e.g., always using same prime in RSA).</li>
+      <li><b>Implementation-level:</b> Side-channel leaks (timing, memory errors).</li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

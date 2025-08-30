@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math for Cryptography</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-classical.html">Classical</a></li>
+      <li><a href="3-math.html">Math</a></li>
+      <li><a href="4-block.html">Block Ciphers</a></li>
+      <li><a href="5-publickey.html">Public Key</a></li>
+      <li><a href="6-hash.html">Hash & MACs</a></li>
+      <li><a href="7-attacks.html">Attacks</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Math for Cryptography</h1>
+
+    <h2>Modular Arithmetic</h2>
+    <ul>
+      <li>(a + b) mod n</li>
+      <li>(a x b) mod n</li>
+      <li>(a^b) mod n</li>
+      <li><b>Inverse:</b> Find x where a·x ≡ 1 mod n (only if gcd(a,n)=1).</li>
+    </ul>
+
+</head>
+<body>
+
+<h2>Feasible Problems (Easy to Solve)</h2>
+<ul>
+    <li>
+        <b>Modular Exponentiation:</b>
+        <p>This is the process of efficiently computing \(a^b \bmod n\). Algorithms like the square-and-multiply method make this very fast, even for large numbers. This is a crucial operation in public-key cryptography.</p>
+    </li>
+    <li>
+        <b>Modular Inverse:</b>
+        <p>Given \(a\) and \(n\), finding \(x\) such that \(ax \equiv 1 \pmod n\) is feasible. The Extended Euclidean Algorithm solves this efficiently and is a core component of key generation in RSA.</p>
+    </li>
+    <li>
+        <b>Primality Testing:</b>
+        <p>Determining whether a large number is prime or composite is surprisingly fast. Algorithms like the Miller-Rabin test can do this probabilistically in a short amount of time, which is essential for finding the large prime numbers needed for RSA.</p>
+    </li>
+</ul>
+
+<h2>Infeasible Problems (Hard to Solve)</h2>
+<ul>
+    <li>
+        <b>Integer Factorization Problem (IFP):</b>
+        <p>Given a large composite number \(n = p \cdot q\) (the product of two large prime numbers), it is extremely difficult to find the original prime factors, \(p\) and \(q\). The security of the RSA cryptosystem relies on this problem being computationally infeasible.</p>
+    </li>
+    <li>
+        <b>Discrete Logarithm Problem (DLP):</b>
+        <p>Given a prime number \(p\), a generator \(g\), and a value \(y = g^x \bmod p\), it is very hard to find the exponent \(x\). The security of the Diffie-Hellman key exchange and ElGamal encryption depends on this problem being hard to solve.</p>
+    </li>
+</ul>
+
+</body>
+</html>
+    <h2>Exam Tip:</h2>
+    <p>Be able to calculate inverses mod n and do small modular exponentiation by hand.</p>
+    <h2>Practice Questions</h2>
+<ol>
+  <li>
+    Find the multiplicative inverse of 3 mod 7.
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">5, because 3×5 = 15 ≡ 1 (mod 7).</div>
+  </li>
+  <li>
+    Which problem is RSA based on: discrete logarithm or integer factorisation?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Integer factorisation.</div>
+  </li>
+  <li>
+    Compute 2^5 mod 11.
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">32 mod 11 = 10.</div>
+  </li>
+</ol>
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

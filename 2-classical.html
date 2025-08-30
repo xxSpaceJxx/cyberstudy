@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Classical Cryptography</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav> 
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-classical.html">Classical</a></li>
+      <li><a href="3-math.html">Math</a></li>
+      <li><a href="4-block.html">Block Ciphers</a></li>
+      <li><a href="5-publickey.html">Public Key</a></li>
+      <li><a href="6-hash.html">Hash & MACs</a></li>
+      <li><a href="7-attacks.html">Attacks</a></li>
+    </ul>
+ </nav>
+  <div class="container">
+    <h1>Classical Cryptography</h1>
+
+    <h2>Caesar Cipher</h2>
+    <p>Each letter shifted by fixed amount. Example: Shift 3 → A=D, B=E.</p>
+    <ul>
+      <li>Key space = 25 (too small).</li>
+      <li>Easily broken by brute force.</li>
+      <li>Vulnerable to frequency analysis.</li>
+    </ul>
+
+    <h2>Monoalphabetic Ciphers</h2>
+    <p>Each letter replaced by another fixed letter.</p>
+    <p>More key space, but still broken by frequency analysis.</p>
+
+    <h2>Polyalphabetic Ciphers</h2>
+    <p>Use multiple substitution alphabets (e.g., Vigenère).</p>
+    <p>Harder to break, but still vulnerable with enough ciphertext.</p>
+
+    <h2>Why Study?</h2>
+    <p>They show fundamental principles but are <b>not secure today</b>.</p>
+    <h2>Practice Questions</h2>
+<ol>
+  <li>
+    Why is the Caesar cipher insecure?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Tiny key space (25 shifts), trivially brute-forced.</div>
+  </li>
+  <li>
+    What attack exploits letter frequency in English text?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Frequency analysis.</div>
+  </li>
+  <li>
+    Why is Vigenère stronger than Caesar but still insecure today?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Multiple alphabets resist simple frequency analysis, but long ciphertexts allow Kasiski/Index-of-Coincidence attacks.</div>
+  </li>
+</ol>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

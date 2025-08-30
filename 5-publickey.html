@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Public Key Cryptography</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-classical.html">Classical</a></li>
+      <li><a href="3-math.html">Math</a></li>
+      <li><a href="4-block.html">Block Ciphers</a></li>
+      <li><a href="5-publickey.html">Public Key</a></li>
+      <li><a href="6-hash.html">Hash & MACs</a></li>
+      <li><a href="7-attacks.html">Attacks</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Public Key Cryptography</h1>
+
+    <h2>RSA Algorithm</h2>
+    <ol>
+      <li>Pick primes p and q.</li>
+      <li>Compute n = p·q and φ(n)=(p−1)(q−1).</li>
+      <li>Pick e such that gcd(e,φ(n))=1.</li>
+      <li>Find d: e·d ≡ 1 mod φ(n).</li>
+      <li>Encrypt: c = m^e mod n.</li>
+      <li>Decrypt: m = c^d mod n.</li>
+    </ol>
+
+    <h2>Security</h2>
+    <p>Based on hardness of factoring n.</p>
+
+    <h2>Other Concepts</h2>
+    <ul>
+      <li><b>Discrete Logarithm:</b> Basis of Diffie-Hellman & ElGamal.</li>
+      <li><b>Trapdoor Functions:</b> Easy one way, hard to invert without secret (like factoring).</li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block Ciphers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-classical.html">Classical</a></li>
+      <li><a href="3-math.html">Math</a></li>
+      <li><a href="4-block.html">Block Ciphers</a></li>
+      <li><a href="5-publickey.html">Public Key</a></li>
+      <li><a href="6-hash.html">Hash & MACs</a></li>
+      <li><a href="7-attacks.html">Attacks</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Block Ciphers (Symmetric Encryption)</h1>
+
+    <h2>Modes of Operation</h2>
+    <ul>
+      <li><b>ECB:</b> Each block encrypted separately. Leaks patterns.</li>
+      <li><b>CBC:</b> Each block XORed with previous ciphertext block. Error propagation.</li>
+      <li><b>CTR:</b> Uses counter + block cipher to create keystream. No error propagation.</li>
+    </ul>
+
+    <h2>Block Cipher Internals</h2>
+    <ul>
+      <li><b>XOR with key:</b> Mixing operation.</li>
+      <li><b>Permutation/Shift:</b> Rearrange bits for diffusion.</li>
+      <li><b>S-Boxes:</b> Non-linear substitution for confusion.</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <ul>
+      <li><b>AES:</b> Modern symmetric standard.</li>
+      <li><b>DES:</b> Old, insecure due to short key (56-bit).</li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
