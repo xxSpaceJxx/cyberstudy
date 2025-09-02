@@ -51,23 +51,49 @@
     </ul>
 
     <h2>Practice Questions</h2>
-    <ol>
-      <li>
-        Are replay attacks passive or active?
-        <button class="toggle-answer">Show Answer</button>
-        <div class="answer" style="display:none;">Active.</div>
-      </li>
-      <li>
-        What type of vulnerability is a timing attack?
-        <button class="toggle-answer">Show Answer</button>
-        <div class="answer" style="display:none;">Implementation-level.</div>
-      </li>
-      <li>
-        Which attack threatens availability?
-        <button class="toggle-answer">Show Answer</button>
-        <div class="answer" style="display:none;">Denial of Service (DoS).</div>
-      </li>
-    </ol>
+<ol>
+  <li>
+    Are replay attacks passive or active?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Active.</div>
+  </li>
+  <li>
+    What type of vulnerability is a timing attack?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Implementation-level.</div>
+  </li>
+  <li>
+    Which attack threatens availability?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Denial of Service (DoS).</div>
+  </li>
+  <li>
+    Give an example of a passive attack.
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Eavesdropping or traffic analysis.</div>
+  </li>
+  <li>
+    What is the difference between design-level and implementation-level vulnerabilities?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">
+      Design-level: flaws in the protocol/system itself (e.g., ECB mode leaks patterns). <br>
+      Implementation-level: bugs in code or hardware (e.g., buffer overflow, timing leaks).
+    </div>
+  </li>
+  <li>
+    Which type of attack involves pretending to be another user?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Impersonation or masquerade attack.</div>
+  </li>
+  <li>
+    Why are side-channel attacks dangerous even if the cryptographic algorithm is mathematically secure?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">
+      Because they exploit information leaked during implementation (like timing or power usage) to recover secrets, bypassing the algorithm's theoretical security.
+    </div>
+  </li>
+</ol>
+
   </div>
 
   <script src="script.js"></script>

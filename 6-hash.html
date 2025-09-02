@@ -38,6 +38,31 @@
     <h2>Digital Signatures vs MACs</h2>
     <p>MACs use shared key (symmetric).  
        Signatures use public/private key pairs (asymmetric).</p>
+  
+       <h2>Practice Questions</h2>
+<ol>
+  <li>
+    What property of a hash function makes it infeasible to find the original message from the hash?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Pre-image resistance.</div>
+  </li>
+  <li>
+    Which property prevents finding a second message that hashes to the same value as a given message?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Second pre-image resistance.</div>
+  </li>
+  <li>
+    What is the main purpose of a Message Authentication Code (MAC)?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">To provide both integrity and authenticity of a message using a shared secret key.</div>
+  </li>
+  <li>
+    How does a digital signature differ from a MAC?
+    <button class="toggle-answer">Show Answer</button>
+    <div class="answer" style="display:none;">Digital signatures use asymmetric keys (public/private) while MACs use a shared symmetric key.</div>
+  </li>
+</ol>
+
   </div>
   <script src="script.js"></script>
 </body>
