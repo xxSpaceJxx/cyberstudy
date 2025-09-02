@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extra Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1-principles.html">Principles</a></li>
+      <li><a href="2-concepts.html">Concepts</a></li>
+      <li><a href="info.html">Extra Info</a></li>
+    </ul>
+  </nav>
+
+  <h1>Extra Information on Security Principles & Concepts</h1>
+
+  <section>
+    <h2>Weakest Link Principle</h2>
+    <p>
+      In practice, the weakest link in a security system is often the human element. 
+      Attackers frequently exploit poor password choices, social engineering, or 
+      phishing instead of attacking strong encryption or secure servers.  
+      A good example is two-factor authentication: even if a password is leaked, 
+      the second factor (like a code on a phone) strengthens the chain.
+    </p>
+    <p>
+      Systems should be audited regularly, because over time, what used to be a strong 
+      link (e.g., an encryption algorithm) might become the weakest one once new 
+      cryptanalysis methods are discovered.
+    </p>
+  </section>
+
+  <section>
+    <h2>Timeliness</h2>
+    <p>
+      Timeliness also applies to incident response. A security breach that is discovered 
+      quickly can be contained before it spreads. Organisations often measure 
+      <i>Mean Time to Detect (MTTD)</i> and <i>Mean Time to Respond (MTTR)</i> as 
+      indicators of security effectiveness.
+    </p>
+    <p>
+      Many organisations use automated monitoring systems (SIEM tools) that can 
+      alert staff in seconds rather than days or weeks.
+    </p>
+  </section>
+
+  <section>
+    <h2>Effectiveness</h2>
+    <p>
+      Effectiveness means striking a balance. For example, using military-grade 
+      encryption for a home Wi-Fi router may not be necessary, but ensuring that 
+      weak or obsolete protocols (like WEP) are not used is critical.  
+    </p>
+    <p>
+      Overly strict security can also reduce effectiveness: if employees are forced 
+      to change passwords every week, they may start writing them down, which makes 
+      the system weaker overall.
+    </p>
+  </section>
+
+  <section>
+    <h2>Defense in Depth</h2>
+    <p>
+      Defense in Depth means layering multiple independent security controls.  
+      For example:
+      <ul>
+        <li>Firewalls protect the network perimeter.</li>
+        <li>Intrusion detection systems monitor for suspicious activity.</li>
+        <li>Encryption protects data if the perimeter is breached.</li>
+        <li>Access controls ensure that even insiders have limited privileges.</li>
+      </ul>
+      If one layer fails, others remain in place, reducing the overall risk.
+    </p>
+    <p>
+      This principle is widely used in military strategy and adapted to cybersecurity 
+      because no single defense is perfect.
+    </p>
+  </section>
+
+  <section>
+    <h2>Real-World Considerations</h2>
+    <p>
+      - Security is not just technical — it also involves legal, financial, and ethical dimensions.  
+      - Many industries must comply with standards such as ISO 27001, PCI DSS, or HIPAA.  
+      - Attackers are adaptive: once a defensive measure becomes widespread, they shift 
+        to targeting less protected areas.  
+      - Security awareness training for employees is one of the most cost-effective 
+        investments organisations can make.  
+    </p>
+  </section>
+
+  <h2>Public Key Encryption (PKE) vs Symmetric Key Encryption (SKE)</h2>
+<p>Encryption systems are broadly divided into two categories: symmetric key and public key.</p>
+
+<h3>Symmetric Key Encryption (SKE)</h3>
+<ul>
+  <li><b>Definition:</b> Both the sender and receiver share the same secret key for encryption and decryption.</li>
+  <li><b>Speed:</b> Very fast, making it suitable for encrypting large volumes of data.</li>
+  <li><b>Security Concern:</b> Key distribution is a major issue—how do two parties securely exchange the secret key?</li>
+  <li><b>Examples:</b> AES, DES, 3DES, ChaCha20.</li>
+</ul>
+
+<h3>Public Key Encryption (PKE)</h3>
+<ul>
+  <li><b>Definition:</b> Uses a pair of mathematically related keys: a public key (for encryption) and a private key (for decryption).</li>
+  <li><b>Speed:</b> Slower compared to symmetric encryption due to the complexity of mathematical operations.</li>
+  <li><b>Security Advantage:</b> Eliminates the need to share a secret key; the public key can be openly distributed.</li>
+  <li><b>Examples:</b> RSA, ElGamal, ECC.</li>
+</ul>
+
+<h3>Comparison</h3>
+<ul>
+  <li><b>Performance:</b> SKE is faster, PKE is slower.</li>
+  <li><b>Key Management:</b> SKE requires secure exchange of secret keys, while PKE simplifies distribution but requires strong private key protection.</li>
+  <li><b>Use Cases:</b> PKE is often used to exchange symmetric keys securely, and then SKE is used for the actual data transfer.</li>
+</ul>
+
+
+</body>
+</html>
