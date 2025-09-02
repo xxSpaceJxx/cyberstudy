@@ -22,61 +22,80 @@
   <div class="container">
     <h1>Cybersecurity Principles</h1>
 
-    <h2>CIA Triad</h2>
-    <p>The foundation of cybersecurity is the CIA triad:</p>
+    <h2>Security Goals (C, I, A, A)</h2>
+    <p>The primary goals of cybersecurity are to protect information system resources, including hardware, software, data, and networks.</p>
     <ul>
-      <li><b>Confidentiality:</b> Ensuring information is not disclosed to unauthorized individuals. 
-      - Example: Encrypting a database so only authorized users can read it.</li>
-      <li><b>Integrity:</b> Ensuring data is accurate and has not been modified. 
-      - Example: Digital signatures to prove that a file has not been tampered with.</li>
-      <li><b>Availability:</b> Ensuring data and services are available when needed. 
-      - Example: Redundant servers to prevent downtime from hardware failure.</li>
+      <li><b>Confidentiality (C):</b> Ensuring secret data remains private.  
+        Achieved through access control (permissions) and encryption (locking data with keys).  
+        <i>Attacks:</i> Eavesdropping, data leakage (hard to detect — prevention is key).</li>
+      <li><b>Integrity (I):</b> Ensuring data is not tampered with.  
+        If you can’t prevent changes, detect them (checksums, hashes).  
+        <i>Attacks:</i> Modification, fabrication.</li>
+      <li><b>Authentication (A):</b> Verifying the identity of a person or system.  
+        Methods: something you know (password), have (ID card), or are (biometrics).  
+        <i>Attacks:</i> Impersonation, repudiation.</li>
+      <li><b>Availability (A):</b> Ensuring resources remain accessible and usable.  
+        <i>Attacks:</i> Denial of Service (DoS) — making a system unusable or extremely slow.</li>
     </ul>
 
-    <h2>Design Principles</h2>
+    <h2>Threat Actions</h2>
     <ul>
-      <li><b>Weakest Link:</b> A system’s security is as strong as its most vulnerable point. 
-        <i>Example: Strong encryption is useless if users write passwords on sticky notes.</i></li>
-      <li><b>Fail-Safe Defaults:</b> Deny access by default; only grant access when explicitly allowed.</li>
-      <li><b>Economy of Mechanism:</b> Keep designs simple. Complexity increases chances of errors.</li>
-      <li><b>Complete Mediation:</b> Every access to every resource should be checked for authorization.</li>
-      <li><b>Separation of Privilege:</b> Require multiple conditions to grant access (e.g., password + fingerprint).</li>
-      <li><b>Least Privilege:</b> Give users only the permissions they absolutely need.</li>
-      <li><b>Psychological Acceptability (Usability):</b> Security must not be too hard to use, or users will bypass it.</li>
+      <li><b>Intrusion:</b> Unauthorized access to a system or network.  
+        <i>Example:</i> A hacker gaining access to a company’s database through a stolen password.</li>
+      <li><b>Corruption:</b> Tampering with or altering data or programs.  
+        <i>Example:</i> Malware modifying financial records or system files.</li>
+      <li><b>Exposure:</b> Sensitive data is made accessible to unauthorized entities.  
+        <i>Example:</i> A misconfigured cloud server leaking customer data publicly.</li>
+      <li><b>Disruption:</b> Interrupting or degrading the normal functioning of a system.  
+        <i>Example:</i> A Distributed Denial of Service (DDoS) attack making a website unavailable.</li>
     </ul>
 
-    <h2>Types of Security Goals Beyond CIA</h2>
+    <h2>Key Principles and Concepts</h2>
     <ul>
-      <li><b>Authentication:</b> Proving an entity’s identity (e.g., username + password, biometrics).</li>
-      <li><b>Non-repudiation:</b> Preventing someone from denying they performed an action 
-      (e.g., digital signatures on contracts).</li>
-      <li><b>Accountability:</b> Keeping logs so actions can be traced to individuals.</li>
+      <li><b>Weakest Link Principle:</b> A system is only as secure as its weakest point.</li>
+      <li><b>Timeliness & Effectiveness:</b> Security must be fast and cost-effective (not more expensive than the asset itself).</li>
+      <li><b>Threat:</b> Any circumstance that can cause harm or loss.</li>
+      <li><b>Vulnerability:</b> A weakness in the system that can be exploited.</li>
+      <li><b>Attack:</b> An action exploiting a vulnerability to compromise a system.</li>
+      <li><b>Control / Countermeasure:</b> A way to reduce or remove vulnerabilities (firewalls, patches, training).</li>
     </ul>
-        <h2>Practice Questions</h2>
+
+    <h2>General Security Approaches</h2>
+    <ul>
+      <li><b>Prevention:</b> Best strategy against passive attacks (e.g., encryption against eavesdropping).</li>
+      <li><b>Detection:</b> Best strategy against active attacks (e.g., intrusion detection, logging).</li>
+      <li><b>Recovery:</b> Restore systems after an attack (backups, failover systems).</li>
+    </ul>
+
+    <h2>Practice Questions</h2>
     <ol>
       <li>
-        Which principle says security should be simple and easy to use?  
+        Which of the four security goals does a DoS attack violate?
         <button class="toggle-answer">Show Answer</button>
-        <div class="answer" style="display:none;">
-          Psychological Acceptability (Usability).
-        </div>
+        <div class="answer" style="display:none;">Availability.</div>
       </li>
       <li>
-        Which part of the CIA triad ensures systems remain usable during a cyberattack?  
+        What are the three general approaches to security?
         <button class="toggle-answer">Show Answer</button>
-        <div class="answer" style="display:none;">
-          Availability.
-        </div>
+        <div class="answer" style="display:none;">Prevention, Detection, Recovery.</div>
       </li>
       <li>
-        What principle states that no user should have more privilege than necessary?  
+        Give an example of an attack on integrity.
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">Data modification or fabrication, e.g., altering a financial transaction.</div>
+      </li>
+      <li>
+        Match each action to its example:  
+        Intrusion, Corruption, Exposure, Disruption.  
         <button class="toggle-answer">Show Answer</button>
         <div class="answer" style="display:none;">
-          Least Privilege.
+          Intrusion → hacker breaks into a database.  
+          Corruption → malware alters records.  
+          Exposure → leaked cloud storage.  
+          Disruption → DDoS attack.
         </div>
       </li>
     </ol>
-
   </div>
 
   <script src="script.js"></script>

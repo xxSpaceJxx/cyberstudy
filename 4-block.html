@@ -18,29 +18,53 @@
       <li><a href="7-attacks.html">Attacks</a></li>
     </ul>
   </nav>
+
   <div class="container">
-    <h1>Block Ciphers (Symmetric Encryption)</h1>
+    <h1>Block Ciphers</h1>
 
     <h2>Modes of Operation</h2>
     <ul>
-      <li><b>ECB:</b> Each block encrypted separately. Leaks patterns.</li>
-      <li><b>CBC:</b> Each block XORed with previous ciphertext block. Error propagation.</li>
-      <li><b>CTR:</b> Uses counter + block cipher to create keystream. No error propagation.</li>
+      <li><b>ECB (Electronic Codebook):</b> Each block encrypted independently. Reveals patterns → insecure.</li>
+      <li><b>CBC (Cipher Block Chaining):</b> Each block XORed with previous ciphertext before encryption. Errors propagate.</li>
+      <li><b>CTR (Counter Mode):</b> Turns block cipher into stream cipher. Parallelisable, no error propagation.</li>
     </ul>
 
-    <h2>Block Cipher Internals</h2>
+    <h2>Components</h2>
     <ul>
-      <li><b>XOR with key:</b> Mixing operation.</li>
-      <li><b>Permutation/Shift:</b> Rearrange bits for diffusion.</li>
-      <li><b>S-Boxes:</b> Non-linear substitution for confusion.</li>
+      <li><b>XOR:</b> Combines plaintext with key bits.</li>
+      <li><b>Circular Shifts:</b> Move bits around to increase diffusion.</li>
+      <li><b>S-Boxes:</b> Non-linear substitution to provide confusion.</li>
     </ul>
 
-    <h2>Examples</h2>
-    <ul>
-      <li><b>AES:</b> Modern symmetric standard.</li>
-      <li><b>DES:</b> Old, insecure due to short key (56-bit).</li>
-    </ul>
+    <h2>Worked Example (like Plover in sample test)</h2>
+    <p>Encrypting a block (in binary):</p>
+    <ol>
+      <li><b>Key XOR:</b> Plaintext ⊕ Key = Result A.</li>
+      <li><b>Circular Shift Right:</b> Shift Result A = Result B.</li>
+      <li><b>Substitution:</b> Replace bits using S-Box = Ciphertext.</li>
+    </ol>
+    <p>This demonstrates diffusion (bit shuffling) and confusion (substitution), key concepts in block cipher security.</p>
+
+    <h2>Practice Questions</h2>
+    <ol>
+      <li>
+        Which block cipher mode leaks patterns in the ciphertext?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">ECB.</div>
+      </li>
+      <li>
+        Which step in a block cipher provides <i>confusion</i>?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">S-Boxes (substitution).</div>
+      </li>
+      <li>
+        If a ciphertext block is corrupted, which mode propagates the error to the next block?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">CBC.</div>
+      </li>
+    </ol>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

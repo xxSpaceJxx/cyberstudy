@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vulnerabilities & Attacks</title>
+  <title>Attacks & Vulnerabilities</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,29 +18,58 @@
       <li><a href="7-attacks.html">Attacks</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <h1>Vulnerabilities & Attacks</h1>
 
-    <h2>Types of Attacks</h2>
+  <div class="container">
+    <h1>Attacks & Vulnerabilities</h1>
+
+    <h2>Attack Classifications</h2>
     <ul>
-      <li><b>Passive:</b> Eavesdropping, traffic analysis.</li>
-      <li><b>Active:</b> Modification, replay, masquerade, denial of service.</li>
+      <li><b>Passive:</b> Eavesdropping, traffic analysis. Aim: read info, not change it. Hard to detect.</li>
+      <li><b>Active:</b> Modify or disrupt. Includes fabrication, replay, impersonation, DoS. Hard to prevent, easier to detect.</li>
     </ul>
 
     <h2>Examples</h2>
     <ul>
-      <li><b>Replay Attack:</b> Capturing and reusing a valid message.</li>
-      <li><b>Masquerade:</b> Pretending to be another user.</li>
-      <li><b>Timing Attack:</b> Infers secrets from runtime differences.</li>
-      <li><b>DoS:</b> Flooding a server to exhaust resources.</li>
+      <li><b>Replay Attack:</b> Capturing and reusing valid data (active).</li>
+      <li><b>Impersonation / Masquerade:</b> Pretending to be another user (active, affects authentication).</li>
+      <li><b>Fabrication:</b> Inserting fake data into a system (active, affects integrity).</li>
+      <li><b>Repudiation:</b> Denying a previous action (attacks accountability).</li>
+      <li><b>Denial of Service (DoS):</b> Making systems unavailable (availability).</li>
     </ul>
 
-    <h2>Vulnerabilities</h2>
+    <h2>Side-Channel Attacks</h2>
     <ul>
-      <li><b>Design-level:</b> Protocol flaw (e.g., always using same prime in RSA).</li>
-      <li><b>Implementation-level:</b> Side-channel leaks (timing, memory errors).</li>
+      <li><b>Timing Attack:</b> Measure execution time to infer secrets (e.g., RSA private key bits).</li>
+      <li><b>Power Analysis:</b> Measure power usage of a device to extract keys.</li>
     </ul>
+    <p>These are <b>implementation-level vulnerabilities</b> — even if the algorithm is mathematically secure, leaks during execution can be exploited.</p>
+
+    <h2>Design vs Implementation Vulnerabilities</h2>
+    <ul>
+      <li><b>Design-level:</b> Fundamental flaws in the protocol/system (e.g., using ECB mode which leaks patterns).</li>
+      <li><b>Implementation-level:</b> Bugs in coding or hardware (e.g., buffer overflow, timing leaks).</li>
+    </ul>
+
+    <h2>Practice Questions</h2>
+    <ol>
+      <li>
+        Are replay attacks passive or active?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">Active.</div>
+      </li>
+      <li>
+        What type of vulnerability is a timing attack?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">Implementation-level.</div>
+      </li>
+      <li>
+        Which attack threatens availability?
+        <button class="toggle-answer">Show Answer</button>
+        <div class="answer" style="display:none;">Denial of Service (DoS).</div>
+      </li>
+    </ol>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
